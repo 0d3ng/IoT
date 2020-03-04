@@ -12,7 +12,36 @@
 - Menghidupkan LED jika TAG RFID terdaftar dalam program
 - Menampilkan keterangan “Kartu Ter-register” dan “Kartu ditolak” untuk setiap kartu yang dibaca
 
+## Teori Singkat
+RFID kepanjangan dari _Radio Frequency Identification_ merupakan sebuah teknologi nirkabel untuk mengirimkan data melalui gelombang radio. Dengan menggunakan RFID kita dapat melacak sebuah objek secara otomatis tanpa bersentuhan langsung dengan objek tersebut, RFID memiliki jangkauan baca antara beberapa Cm sampai dengan lebih dari 20 meter tergantung dari jenis RFID.
+
+### Tipe RFID
+RFID terdapat beberapa jenis sesuai dengan Electronic Spectrum pada gambar di bawah ini
+![](images/rfid-spectrum.png)
+> Warna orange menandakan frekuensi yang digunakan oleh aplikasi RFID
++ Low Frequency 
+
+  Bekerja secara umum pada range 30 - 300 KHz biasanya digunakan di frekuensi 125 - 134 KHz. Untuk jarak bacanya adalah kontak atau bersentuhan sampai dengan 10cm
+
++ High Frequency
+
+  Digunakan pada frekuensi 13.56 KHz. Untuk jarak bacanya adalah hampir tidak  bersentuhan sampai dengan 30cm
+
++ Ultra High Frequency
+  
+  Bekerja pada frekuensi 300 - 3000 KHz.
+
+### Cara Kerja RFID
+Agar RFID bisa berjalan dan digunakan dibutuhkan beberapa perangkat yang ditunjukkan pada gambar di bawah ini
+
+![](images/rfid-system.png)
+
++ _Readers_ adalah perangkat yang digunakan untuk melakukan pembacaan tag RFID, berfungsi sebagai penerima dan mengirimkan gelombang radio untuk berkomunikasi dengan tag RFID.
++ _Antena_ sebuah komponen yang terdapat di dalam sebuah tag RFID, biasanya berbentuk lilitan tembaga.
++ _Tag_ terdiri dari antena untuk mengirimkan dan menerima sinyal dan chip RFID untuk menyimpan informasi.
+
 ## Praktikum
+Pada praktikum kali ini akan menggunakan reader RC522 dan tag smartcard mifare 1K.
 
 ![](images/rfid-mfrc522.png)
 
@@ -26,6 +55,8 @@
 | GND     | GND           |
 | RST     | D3 \(GPIO0\)  |
 | 3V3     | 3V3           |
+
+Silakan dibuat kode dibawah ini, kemudian upload kode tersebut ke controller atau esp8266 Anda.
 
 ```cpp
 #include <SPI.h>
@@ -74,6 +105,9 @@ void dump_byte_array(byte *buffer, byte bufferSize)
   }
 }
 ```
+Dari program di atas seharusnya ketika dijalankan akan menampilkan serial dari sebuah tag rfid, smartcard.
+
+Praktikum yang kedua mencoba membuat LED RGB yang nantinya akan dikombinasikan dengan praktikum yang sebelumnya.
 
 ![](images/08-led-03.png)
 
@@ -138,7 +172,8 @@ Baris perintah di atas akan melakukan inisialisasi LED untuk diredupkan, karena 
 
 ## Tugas
 Buatlah sebuah aplikasi yang sederahana menggunakan RFID, LED RGB, dan LCD. Skenarionya adalah sebagai berikut
-1. Daftarkan beberapa UID kartu terlebih dahulu di program yang Anda buat.
-2. Ketika RFID diletakan atau ditempelkan pada reader dengan kartu yang terdaftar lampu hijau akan menyala dan pada LCD akan tertampil `Silakan Masuk`.
-3. Ketika RFID diletakan atau ditempelkan pada reader dengan kartu yang tidak terdaftar lampu merah akan menyala dan pada LCD akan tertampil `Dilarang Masuk`.
-4. Ketika tidak ada kartu yang ditempelkan lampu biru akan berkedip-kedip.
+1. Buatlah ketiga komponen tersebut di dalam satu rangkaian menggunakan fritzing.
+2. Daftarkan beberapa UID kartu terlebih dahulu di program yang Anda buat.
+3. Ketika RFID diletakan atau ditempelkan pada reader dengan kartu yang terdaftar lampu hijau akan menyala dan pada LCD akan tertampil `Silakan Masuk`.
+4. Ketika RFID diletakan atau ditempelkan pada reader dengan kartu yang tidak terdaftar lampu merah akan menyala dan pada LCD akan tertampil `Dilarang Masuk`.
+5. Ketika tidak ada kartu yang ditempelkan lampu biru akan berkedip-kedip.
