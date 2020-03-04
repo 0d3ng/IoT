@@ -125,7 +125,7 @@ void loop()
 ```
 
 ## Tugas
-Buatlah program yang dapat mengirimkan data sensor DHT dan dapat membaca perintah untuk menyalakan LED dari socket server. Skenario dari program tersebut adalah sebagai berikut
-1. Secara berkala program akan mengirimkan data sensor DHT
+Buatlah program yang dapat mengirimkan data sensor DHT dan dapat membaca perintah untuk menyalakan LED dari socket server. Skenario dari program tersebut adalah sebagai berikut, terlebih dahulu silakan buat rangkaiannya.
+1. Secara berkala program akan mengirimkan data sensor DHT, Ultrasonic, dan cahaya.
 2. Ketika menerima perintah untuk menyalakan LED. LED built-in akan berkedip sekali.
 3. Tambahkan skenario untuk menerima perintah menyalakan lampu berdasarkan perangkat tertentu. Simulasikan lebih dari satu perangkat dalam sebuah socket server. 
