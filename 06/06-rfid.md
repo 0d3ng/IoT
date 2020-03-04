@@ -19,15 +19,15 @@ RFID kepanjangan dari _Radio Frequency Identification_ merupakan sebuah teknolog
 RFID terdapat beberapa jenis sesuai dengan Electronic Spectrum pada gambar di bawah ini
 ![](images/rfid-spectrum.png)
 > Warna orange menandakan frekuensi yang digunakan oleh aplikasi RFID
-+ Low Frequency 
++ _Low Frequency_ 
 
   Bekerja secara umum pada range 30 - 300 KHz biasanya digunakan di frekuensi 125 - 134 KHz. Untuk jarak bacanya adalah kontak atau bersentuhan sampai dengan 10cm
 
-+ High Frequency
++ _High Frequency_
 
   Digunakan pada frekuensi 13.56 KHz. Untuk jarak bacanya adalah hampir tidak  bersentuhan sampai dengan 30cm
 
-+ Ultra High Frequency
++ _Ultra High Frequency_
   
   Bekerja pada frekuensi 300 - 3000 KHz.
 
@@ -39,6 +39,8 @@ Agar RFID bisa berjalan dan digunakan dibutuhkan beberapa perangkat yang ditunju
 + _Readers_ adalah perangkat yang digunakan untuk melakukan pembacaan tag RFID, berfungsi sebagai penerima dan mengirimkan gelombang radio untuk berkomunikasi dengan tag RFID.
 + _Antena_ sebuah komponen yang terdapat di dalam sebuah tag RFID, biasanya berbentuk lilitan tembaga.
 + _Tag_ terdiri dari antena untuk mengirimkan dan menerima sinyal dan chip RFID untuk menyimpan informasi.
+
+RFID dapat digunakan pada public transportation, membership, id card, dan berbagai sektor lainnya.
 
 ## Praktikum
 Pada praktikum kali ini akan menggunakan reader RC522 dan tag smartcard mifare 1K.
@@ -57,6 +59,8 @@ Pada praktikum kali ini akan menggunakan reader RC522 dan tag smartcard mifare 1
 | 3V3     | 3V3           |
 
 Silakan dibuat kode dibawah ini, kemudian upload kode tersebut ke controller atau esp8266 Anda.
+
+> Sebelum menggunakan reader MFRC522 silakan download library di [sini](https://github.com/miguelbalboa/rfid.git) atau melalui arduino ide.
 
 ```cpp
 #include <SPI.h>
