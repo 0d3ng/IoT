@@ -105,5 +105,6 @@ if (line.equalsIgnoreCase("led-on"))
 Fungsi kode di atas digunakan untuk membaca setiap data dari socket server, ketika data tersebut `led-on` berarti akan menghidupkan LED bawaan esp8266.
 
 ## Tugas
-Buatlah program socket server yang dapat menerima pengiriman data dari client, program tersebut juga harus bisa membedakan misalkan data sensor DHT, sensor ultrasonik, atau sensor-sensor yang lain.
-Selain itu server juga harus mengirimkan status ke client.
+Terdapat sebuah dusun di desa tertentu yang sudah menerapkan IoT, contoh penerapan tersebut di gang-gang ketika sudah beranjak malam lampu yang terdapat pada gang tersebut akan menyala. Pada dusun tersebut juga terdapat kebun rumah kaca, dimana suhu dan kelembaban sangat diperhatikan untuk menjaga produktivitas sayur-sayur di dalam kebun. Semua sensor yang terdapat pada dusun tersebut juga dapat dimonitoring dan semua lampu yang terdapat pada gang-gang dapat dinyalakan melalui server.
+
+Dari kasus di atas, buat program untuk kebutuhan tersebut baik dari sisi controller (ESP8266) atau dari sisi server.
