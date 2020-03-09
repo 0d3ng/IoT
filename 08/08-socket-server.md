@@ -19,20 +19,15 @@ Untuk kode socket server akan dibuat agar fungsi-fungsi didalamnya lebih banyak 
 Masih menggunakan kode socket server yang sebelumnya, ubahlah kode pada fungsi `run` menjadi seperti di bawah ini.
 
 ```python
-    def run(self):
+def run(self):
         while True:
             try:
-                data = conn.recv(2048)
-                if len(data) == 0:
-                    break
-
-                print("length: " + str(len(data)))
-                print("Server received data:", data)
                 MESSAGE = input("Input response:")
                 conn.send(MESSAGE.encode("utf8"))  # echo
             except Exception as e:
                 print(e)
                 break
+            sleep(0.25)
 ```
 Dengan mengubah program tersebut, socket server yang akan kita buat mampu menerima input dari keyboard sehingga dapat dimanfaatkan untuk memasukan perintah pada controller atau ESP8266 yang kita miliki.
 
@@ -43,10 +38,9 @@ Dengan mengubah program tersebut, socket server yang akan kita buat mampu meneri
 const char *ssid = "####";
 const char *password = "####";
 const uint16_t port = 2004;
-const char *host = "192.168.43.85";
+const char *host = "####";
 
-void connect_wifi();
-void connect_server();
+WiFiClient client;
 
 void connect_wifi()
 {
@@ -63,34 +57,14 @@ void connect_wifi()
 
 void connect_server()
 {
-  WiFiClient client;
-
-  Serial.printf("\n[Connecting to %s ... ", host);
-  if (client.connect(host, port))
+  while (!client.connect(host, port))
   {
-    Serial.println("connected]");
-
-    Serial.println("[Sending a request]");
-    client.print("Hai from ESP8266");
-
-    Serial.println("[Response:]");
-    String line = client.readStringUntil('\n');
-    Serial.println(line);
-    if (line.equalsIgnoreCase("led-on"))
-    {
-      pinMode(BUILTIN_LED, HIGH);
-      delay(3000);
-      pinMode(BUILTIN_LED, LOW);
-    }
-    client.stop();
-    Serial.println("\n[Disconnected]");
+    Serial.printf("\n[Connecting to %s ... ", host);
+    delay(1000);
+    return;
   }
-  else
-  {
-    Serial.println("connection failed!]");
-    client.stop();
-  }
-  delay(3000);
+  Serial.println("connected]");
+  delay(1000);
 }
 
 void setup()
@@ -98,11 +72,24 @@ void setup()
   Serial.begin(115200);
   Serial.println("Contoh penggunaan socket client");
   connect_wifi();
+  connect_server();
 }
 
 void loop()
 {
-  connect_server();
+  if (client.connected())
+  {
+    Serial.print("[Response:]");
+    String line = client.readStringUntil('\n');
+    Serial.println(line);
+    if (line.equalsIgnoreCase("led-on"))
+    {
+      pinMode(LED_BUILTIN, HIGH);
+      delay(3000);
+      pinMode(LED_BUILTIN, LOW);
+    }
+  }
+  delay(250);
 }
 ```
 Kode tersebut mirip dengan kode pada pertemuan sebelumnya, yang perlu dimodifkasi adalah bagian di bawah ini
