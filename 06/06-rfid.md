@@ -42,7 +42,7 @@ Agar RFID bisa berjalan dan digunakan dibutuhkan beberapa perangkat yang ditunju
 
 RFID dapat digunakan pada public transportation, membership, id card, dan berbagai sektor lainnya.
 
-## Praktikum
+## Praktikum 1
 Pada praktikum kali ini akan menggunakan reader RC522 dan tag smartcard mifare 1K.
 
 ![](images/rfid-mfrc522.png)
@@ -111,6 +111,7 @@ void dump_byte_array(byte *buffer, byte bufferSize)
 ```
 Dari program di atas seharusnya ketika dijalankan akan menampilkan serial dari sebuah tag rfid, smartcard.
 
+## Praktikum 2
 Praktikum yang kedua mencoba membuat LED RGB yang nantinya akan dikombinasikan dengan praktikum yang sebelumnya.
 
 ![](images/08-led-03.png)
@@ -173,6 +174,67 @@ Potongan kode di atas digunakan untuk mengkonfigurasi atau menentukan pin-pin ya
   digitalWrite(GREEN, HIGH);
 ```
 Baris perintah di atas akan melakukan inisialisasi LED untuk diredupkan, karena LED yang digunakan menggunakan common anode sehingga menggunakan `HIGH`.
+
+## Praktikum 3
+Pada praktikum yang ketiga akan menggunakan LCD 16x2, LCD biasanya digunakan untuk menampilkan pesan atau status tertentu agar lebih informatif pada aplikasi atau program yang kita buat.
+
+Berbagai jenis LCD bergantung dengan banyaknya karakter yang dapat ditampilkan, misalkan 16x2 ataupun 20x4. 16x2 artinya LCD tersebut mampu menampilkan sebanyak 32 karakter, dengan jumlah barisnya 2 dan jumlah kolomnya adalah 16.
+
+Biasanya untuk memudahkan dalam wiring kita membutuhkan modul i2c, fungsi modul tersebut agar menyederhanakan jumlah kabel yang digunakan. Berikut ini adalah tampilan fritzing yang sapat dapat diterapkan.
+
+![](images/esp8266-lcd-i2c.png)
+
+> Versi fritzing dapat diunduh di [sini](images/esp8266-lcd-i2c.fzz)
+
+Dari gambar di atas, diperjelas pada tabel di bawah ini
+
+Untuk lebih jelaskan dapat dilihat pada tabel di bawah ini
+| ESP8266 Amica | LCD I2C                            |
+|---------------|------------------------------------|
+| Vin           | GND                                |
+| GND           | Hijau                              |
+| D1            | SCL                                |
+| D2            | SDA                                |
+
+Buatlah kode di bawah ini untuk mencoba menampilkan data pada sebuah LCD
+```cpp
+#include <LiquidCrystal_I2C.h>
+
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+void setup()
+{
+  lcd.init(); // initialize the lcd
+  lcd.backlight();
+
+  lcd.home();
+}
+
+void loop()
+{
+  lcd.home();
+  lcd.print("Polinema");
+  scrollText(1, "Kelas IoT.", 250, 16);
+}
+
+void scrollText(int row, String message, int delayTime, int lcdColumns)
+{
+  for (int i = 0; i < lcdColumns; i++)
+  {
+    message = " " + message;
+  }
+  message = message + " ";
+  for (int pos = 0; pos < message.length(); pos++)
+  {
+    lcd.setCursor(0, row);
+    lcd.print(message.substring(pos, pos + lcdColumns));
+    delay(delayTime);
+  }
+}
+```
+> Untuk memudahkan pemanfaatan LCD tersebut bisa menggunakan library yang terdapat di [https://github.com/johnrickman/LiquidCrystal_I2C.git](https://github.com/johnrickman/LiquidCrystal_I2C.git)
+
+Pada kode di atas terdapat baris perintah `LiquidCrystal_I2C lcd(0x27, 16, 2);`, berfungsi untuk menginisialisasi lcd dengan alamat i2c terdapat di `0x27` menggunakan LCD 16x2.
 
 ## Tugas
 Buatlah sebuah aplikasi yang sederahana menggunakan RFID, LED RGB, dan LCD. Skenarionya adalah sebagai berikut
