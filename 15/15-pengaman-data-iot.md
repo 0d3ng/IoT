@@ -20,11 +20,11 @@ Jenis-jenis AES yang dapat digunakan adalah AES-128, AES-192, dan AES-256. 128, 
 Pada praktikum kali ini kita akan mengirimkan data yang terenkripsi AES menggunakan ESP8266, kemudian server yang telah kita bangun sebelumnya melakukan data dekripsi. 
 
 Sebelum membuat program enkripsi, silakan ditambahkan terlebih dahulu file-file berikut ini
-- `AES.cpp`
-- `AES.h`
-- `AES_config.h`
-- `Base64.cpp`
-- `Base64.h`
+- [`AES.cpp`](https://github.com/0d3ng/socket-client/blob/jobsheet15/src/AES.cpp)
+- [`AES.h`](https://github.com/0d3ng/socket-client/blob/jobsheet15/src/AES.h)
+- [`AES_config.h`](https://github.com/0d3ng/socket-client/blob/jobsheet15/src/AES_config.h)
+- [`Base64.cpp`](https://github.com/0d3ng/socket-client/blob/jobsheet15/src/Base64.cpp)
+- [`Base64.h`](https://github.com/0d3ng/socket-client/blob/jobsheet15/src/Base64.h)
 > Ketika menggunakan Arduino IDE, masukkan file-file tersebut pada folder installasi arduino - buat folder pada `libraries`
 
 Selain library di atas, dibutuhkan juga library `ArduinoJson`. Silakan intall library tersebut menggunakan library manager `Arduino IDE` atau secara manual dengan mengunduh di [https://github.com/bblanchon/ArduinoJson.git](https://github.com/bblanchon/ArduinoJson.git). Setelah berhasil didownload copy-kan pada folder `libraries`.
