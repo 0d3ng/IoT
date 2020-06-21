@@ -156,7 +156,8 @@ d56f0cc9139d        mpherg/blynk-server:latest   "java -jar /blynk/se…"   18 s
 ```
 
 ## Praktikum 2 Menghubungkan aplikasi mobile Blynk dengan lokal server
-Pada umunya aplikasi mobile Blynk bekerja dengan menggunakan Blynkcloud dengan cara menghubungkannya melalui internet. Jika Anda ingin menghubungkan aplikasi mobile Blynk Anda dengan server Blynk pribadi (local server), Anda harus mengonfigurasi beberapa atribut pada aplikasi mobile Blynk. Atribut ini akan membantu Anda menemukan server Blynk pribadi yang digunakan pada jaringan yang sama (yaitu, jaringan Wi-Fi rumah Anda). Jika Anda ingin mengakses server Blynk pribadi dari internet, Anda dapat menggunakan penerusan port untuk mengaksesnya. Untuk melakukan ini, Anda juga memerlukan alamat IP statis. 
+Pada umunya aplikasi mobile Blynk bekerja dengan menggunakan Blynkcloud dengan cara menghubungkannya melalui internet. Jika Anda ingin menghubungkan aplikasi mobile Blynk Anda dengan server Blynk pribadi (local server), Anda harus mengonfigurasi beberapa atribut pada aplikasi mobile Blynk. Atribut ini akan membantu Anda menemukan server Blynk pribadi yang digunakan pada jaringan yang sama (yaitu, jaringan Wi-Fi rumah Anda). Jika Anda ingin mengakses server Blynk pribadi dari internet, Anda dapat menggunakan penerusan port untuk mengaksesnya. Untuk melakukan ini, Anda juga memerlukan alamat IP statis.
+> Anda harus download blynk untuk aplikasi mobile, dapat didapatkan di [sini](https://play.google.com/store/apps/details?id=cc.blynk&hl=en_US) 
  
 1. Pertama, Anda harus mengonfigurasi jalur server tersendiri untuk server Blynk pribadi Anda yang berjalan di Raspberry Pi atau laptop Anda. 
 2.	Di halaman login, ketuk Create New Account:
