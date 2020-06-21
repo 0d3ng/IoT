@@ -132,7 +132,8 @@ Untuk mengunduh docker dapat didapatkan di [sini](https://www.docker.com/product
 
 ### Install Blynk
 Setelah terinstall, jalankan perintah di bawah ini pada commmand prompt atau terminal.
-```shell script
+
+```
 $ docker run --name blynk -p 8080:8080 -p 8441:8441 -p 9443:9443 mpherg/blynk-server:latest
 Blynk Server 0.41.10 successfully started.
 All server output is stored in folder '/data/logs' file.
@@ -149,7 +150,7 @@ versi yang terbaru. Tetapi ketika di laptop sudah ada dan versinya audah terbaru
 - `--name blynk` adalah nama container, sebenarnya optional dan ketika tidak diset maka akan random untuk penamaannya.
 
 Selanjutnya, jalankan perintah di bawah ini untuk ngecek apakah blynk sudah jalan atau belum di docker
-```shell script
+```
 $docker ps
 CONTAINER ID        IMAGE                        COMMAND                  CREATED             STATUS              PORTS                                                                    NAMES
 d56f0cc9139d        mpherg/blynk-server:latest   "java -jar /blynk/se…"   18 seconds ago      Up 17 seconds       0.0.0.0:8080->8080/tcp, 0.0.0.0:8441->8441/tcp, 0.0.0.0:9443->9443/tcp   blynk
@@ -218,7 +219,7 @@ Mengacu pada langkah-langkah berikut, Anda dapat membuka antarmuka administrasi 
     ![](images/image015.jpg) 
   
 6.	Di panel navigasi sebelah kiri, klik Config. Anda akan mendapatkan daftar konfigurasi untuk yang berikut:
-```shell script
+```
 twitter4j.properties: Ini diperlukan untuk pemberitahuan Twitter 
 single_token_mail_body.txt server.properties: Pengaturan yang terkait dengan server 
 mail.properties: Diperlukan untuk pemberitahuan email 
