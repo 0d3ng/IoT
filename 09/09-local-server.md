@@ -95,6 +95,7 @@ Untuk tujuan pengujian, Anda dapat menggunakan papan Raspberry Pi 3 untuk menjal
     Blynk Server 0.41.12-SNAPSHOT successfully started. 
     All server output is stored in folder '/home/pi/logs' file. 
     ```
+    
 ### Mengaktifkan autostart dengan rc.local
 Anda dapat mengkonfigurasi Raspberry Pi untuk melakukan autostart server Blynk Anda ketika sistem dimulai: 
 1. Di Raspberry Pi Anda, edit /etc/rc.local file menggunakan editor nano: 
@@ -130,7 +131,7 @@ Walapun antara kontainer terisolasi, tetapi antara kontainer bisa berkomunikasi 
 
 Untuk mengunduh docker dapat didapatkan di [sini](https://www.docker.com/products/docker-desktop)
 
-### Install Blynk
+#### Install Blynk
 Setelah terinstall, jalankan perintah di bawah ini pada commmand prompt atau terminal.
 
 ```
@@ -173,7 +174,8 @@ Pada umunya aplikasi mobile Blynk bekerja dengan menggunakan Blynkcloud dengan c
 5.	Masukkan alamat IP Raspberry Pi atau laptop Anda sesuaikan dengan IP pada perangkat Anda masing-masing (misal, 192.168.1.4) dan nomor port. Port default untuk server Blynk adalah 9443. Lalu, ketuk OK untuk menyimpan pengaturan:  
     ![](images/image007.jpg)
     Pengaturan server — langkah 1 
-6.	Ketikkan nama pengguna (alamat email) dan kata sandi untuk akun pengguna baru. 
+
+6. Ketikkan nama pengguna (alamat email) dan kata sandi untuk akun pengguna baru. 
 7.	Ketuk Sign Up untuk membuat akun. Anda dapat melihat pesan `Connecting…` di bagian bawah halaman saat membuat akun. 
 8.	Setelah membuat akun, aplikasi akan menunjukkan tips tentang cara kerja energi. Ketuk tombol `Cool! Got it` dan Anda akan pergi ke dasbor proyek: 
  
@@ -181,6 +183,7 @@ Pada umunya aplikasi mobile Blynk bekerja dengan menggunakan Blynkcloud dengan c
  
 Untuk menjalankan proyek, Anda akan memerlukan token autentikasi terkait dengan proyek pembuat aplikasi Blynk di bawah server pribadi Blynk Anda: 
 1. Ketuk `New Project`. Anda akan mendapatkan tampilan halaman Create New Project seperti berikut: 
+    
     ![](images/image008.jpg)
     
 2.	Pada halaman `Create New Project`, isikan nama proyek di `Project Name` dan pilih jenis perangkat keras yang anda pakai. Dalam hal ini, Anda harus memilih model controller IoT yang akan digunakan atau tempat menjalankan program. misalkan ESP2866. Lalu, ketuk OK: 
