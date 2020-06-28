@@ -52,7 +52,8 @@ SimpleTimer timerDHT;
 //cek di email konfirmasi Anda 
 char auth[] = "m6X-9KmShTi_mIi-EvMSRWF8N5auY6M5"; //lokal server, sesuaikan dengan token blynk masing-masing 
 //char auth[] = "QGNNlp_hfvBCqhMuLxijr1_FoNzPrsP6"; //Blynk server, sesuaikan dengan token blynk masing-masing 
-char ssid[] = "Fanny 2004"; // SSID, silahkan disesuaikan char pass[] = "fanny_200504"; //Password AP, silahkan disesuaikan 
+char ssid[] = "Fanny 2004"; // SSID, silahkan disesuaikan 
+char pass[] = "fanny_200504"; //Password AP, silahkan disesuaikan 
  
 SoftwareSerial UART_GPS(RX_GPS , TX_GPS); 
 TinyGPSPlus gps; 
@@ -64,19 +65,24 @@ SimpleDHT11 dht11(pinDHT);
 LiquidCrystal_I2C lcd(0x27, 16, 2); 
  
 //membuat karakter derajat custom 
-//https://maxpromer.github.io/LCD-Character-Creator/ byte derajat[] = { 
+//https://maxpromer.github.io/LCD-Character-Creator/ 
+byte derajat[] = { 
   B01110, 
   B10001, 
   B10001, 
   B10001, 
   B01110, 
   B00000, 
-  B00000,   B00000 }; 
+  B00000,   
+  B00000 
+}; 
  
 //WidgetLCD lcd_blynk(V5); 
 WidgetMap myMap(V4); 
  
-void setup() {     myservo.attach(pinServo);   myservo.write(degServo);   
+void setup() {     
+  myservo.attach(pinServo);   
+  myservo.write(degServo);   
    
   Serial.begin(9600); 
   UART_GPS.begin(9600); //inisialisasi GPS 
@@ -84,24 +90,44 @@ void setup() {     myservo.attach(pinServo);   myservo.write(degServo);
   Blynk.begin(auth, ssid, pass, "192.168.1.4", 8080); //lokal server   pinMode(pinLedMerah, OUTPUT);   pinMode(pinLedKuning, OUTPUT);   pinMode(pinLedHijau, OUTPUT);   pinMode(pinDHT, INPUT);   KonfigurasiLCD(); 
   timerDHT.setInterval(2000, KelembabanSuhu); 
   //timerGPS.setInterval(2000, Lokasi_gps); 
-}  void loop() {   Blynk.run();   timerDHT.run();     smartDelay(1000); 
+}  
+
+void loop() {   
+  Blynk.run();   
+  timerDHT.run();     
+  smartDelay(1000); 
   Lokasi_gps(); 
 } 
  
 BLYNK_WRITE(V5) 
 {   
-  degServo = param.asInt();   myservo.write(degServo);   
+  degServo = param.asInt();  
+  myservo.write(degServo);   
 }  
-void KonfigurasiLCD() {   lcd.begin(); // Inisialisasi LCD   lcd.createChar(0, derajat); 
-  lcd.backlight(); // Menghidupkan backlight   lcd.setCursor(0, 0);   lcd.print(" Welcome UNISBA ");   lcd.setCursor(0, 1);   lcd.print("   PROJECT 4    ");   delay(3000);   lcd.clear(); 
-}  void KelembabanSuhu() {   byte temperature;   byte humidity; 
+
+void KonfigurasiLCD() {   
+  lcd.begin(); // Inisialisasi LCD   
+  lcd.createChar(0, derajat); 
+  lcd.backlight(); // Menghidupkan backlight   
+  lcd.setCursor(0, 0);   
+  lcd.print(" Welcome UNISBA ");   
+  lcd.setCursor(0, 1);   
+  lcd.print("   PROJECT 4    ");   
+  delay(3000);   
+  lcd.clear(); 
+}  
+
+void KelembabanSuhu() {   
+  byte temperature;   
+  byte humidity; 
   int err = SimpleDHTErrSuccess; 
  
-  if ((err = dht11.read(&temperature, &humidity, NULL)) != 
-SimpleDHTErrSuccess) 
+  if ((err = dht11.read(&temperature, &humidity, NULL)) != SimpleDHTErrSuccess) 
   { 
     Serial.print("Pembacaan DHT11 gagal, err="); 
-    Serial.println(err);     delay(1000);     return; 
+    Serial.println(err);     
+    delay(1000);
+    return; 
   } 
  
   Serial.print("Sample OK: "); 
@@ -125,19 +151,25 @@ SimpleDHTErrSuccess)
   lcd.print("Hum:" + String((int)humidity) + "H");     lcd.setCursor(0, 1);   
   lcd.print("Servo Deg:" + String(degServo));   lcd.write(0);   
 }  
+
 void Lokasi_gps() { 
   Serial.println("Lat: " + String(gps.location.lat()) + " - Lng: " + gps.location.lng()); 
   Blynk.virtualWrite(V2, "Lint.:" + String(gps.location.lat(), 6));   Blynk.virtualWrite(V3, "Bujur:" + String(gps.location.lng(), 6));   myMap.location(2, gps.location.lat(), gps.location.lng(), "Lokasi Saya"); 
 }  
+
 static void smartDelay(unsigned long ms) 
 { 
-  unsigned long start = millis();   do   { 
-    while (UART_GPS.available())       gps.encode(UART_GPS.read());   } while (millis() - start < ms); 
+  unsigned long start = millis();   
+  do   { 
+    while (UART_GPS.available())       
+    gps.encode(UART_GPS.read());   
+  } while (millis() - start < ms); 
 } 
 ```
 
 ### Konfigurasi Pada Blynk Android 
 Download dan install aplikasi blynk dari plystore 
+
 ![](images/image003.jpg)  
 
 Buat koneksi antara Blynk sebagai subscriber dengan Raspberry Pi 3 sebagai server IoT. Pada kasus ini kita menggunakan local server yang saya sediakan.
