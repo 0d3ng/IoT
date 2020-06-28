@@ -1,0 +1,628 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>08. Sensor Ultrasonic · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../05/06-rfid.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Pendahuluan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    01. Memahami Konsep dan arsitektur IoT
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    02. Microcontroller
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../01/01.installasi-dan-konfigurasi.html">
+            
+                <a href="../01/01.installasi-dan-konfigurasi.html">
+            
+                    
+                    03. Instalasi, Konfigurasi software & Hardware pendukung
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../02/02-led.html">
+            
+                <a href="../02/02-led.html">
+            
+                    
+                    04. Implementation NodeMCU LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../03/05-Sensor-suhu-dan-kelembaban.html">
+            
+                <a href="../03/05-Sensor-suhu-dan-kelembaban.html">
+            
+                    
+                    05. Implementasi sensor suhu dan kelembaban
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../04/06-sensor-cahaya.html">
+            
+                <a href="../04/06-sensor-cahaya.html">
+            
+                    
+                    06. Sensor Cahaya
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../05/06-rfid.html">
+            
+                <a href="../05/06-rfid.html">
+            
+                    
+                    07. RFID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10" data-path="07-ultrasonic.html">
+            
+                <a href="07-ultrasonic.html">
+            
+                    
+                    08. Sensor Ultrasonic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    09. UTS
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../07/07-socket-client.html">
+            
+                <a href="../07/07-socket-client.html">
+            
+                    
+                    10. Socket Client
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../08/08-socket-server.html">
+            
+                <a href="../08/08-socket-server.html">
+            
+                    
+                    11. Socket Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../09/09-local-server.html">
+            
+                <a href="../09/09-local-server.html">
+            
+                    
+                    12. Local Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../10/10-monitoring-controlling-local-server.html">
+            
+                <a href="../10/10-monitoring-controlling-local-server.html">
+            
+                    
+                    13. Monitoring dan Controlling pada Local Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" >
+            
+                <span>
+            
+                    
+                    Nilai
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../nilai/01-ti-3b.html">
+            
+                <a href="../nilai/01-ti-3b.html">
+            
+                    
+                    TI-3B
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../nilai/02-ti-3c.html">
+            
+                <a href="../nilai/02-ti-3c.html">
+            
+                    
+                    TI-3C
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >08. Sensor Ultrasonic</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="programming-implementation-on-nodemcu-ultrasonic-sensor-hc-sr04">Programming Implementation On NodeMCU Ultrasonic Sensor HC-SR04</h1>
+<h2 id="tujuan">Tujuan</h2>
+<ul>
+<li>Mampu memahami cara kerja sensor ultrasonic</li>
+<li>Mampu memahami bagaimana cara menghitung jarak antara benda penghalang dan sensor ultrasonic berdasarkan signal gelombang yang dikirim dan diterima</li>
+<li>Mampu membuat program perhitungan jarak antara benda penghalang dan sensor dalam satuan cm dan inch yang ditampilkan ke layar LCD I2C</li>
+</ul>
+<h2 id="capaian">Capaian</h2>
+<ul>
+<li>Menjelaskan proses perhitungan jarak berdasarkan gelombang dikirim dan diterima</li>
+<li>Menampilkan jarak antara benda penghalang dengan ultrasonic ke layar LCD I2C dalam satuan cm dan inch</li>
+</ul>
+<h2 id="teori-singkat">Teori Singkat</h2>
+<h3 id="ultrasonic-sensor-hc-sr04">Ultrasonic Sensor HC-SR04</h3>
+<p>Sensor ultrasonik merupakan sensor yang berfungsi untuk mendeteksi suatu benda dengan jarak tertentu sesuai dengan jenis sensornya. Pada praktikum kali ini dibahas mengenai cara menggunakan serta implemetasi sensor ultrasonik pada NodeMCU. Sensor ultrasonik yang digunakan adalah tipe HC-SR04 dengan jarak yang dapat untuk mendeteksi benda dengan akurasi 3 mm. Sensor ini memiliki pin Trigger, dimana pin ini berfungsi sebagai pengirim sinyal dan pin Echo yang berfungsi sebagai penerima sinyal yang didapat dari pantulan benda. </p>
+<p>Sensor ultrasonik ialah sensor yang mempunyai kemampuan untuk mengubah besaran fisis yaitu bunyi kedalam besaran listrik, begitu juga sebaliknya. Sensor ini bekerja berdasarkan perhitungan dari pantulan suatu gelombang ultrasonik sehingga jarak suatu benda dapat diketahui. Nilai gelombang ultrasonik mencapai 20.000 Hz yang tidak bisa didengar oleh telinga manusia karena sangat tinggi dan hanya bisa didengar oleh hewan-hewan tertentu seperti anjing, kucing, atau kelelawar.</p>
+<p>Pada sensor ultrasonik tersusun atas rangkaian transmitter sebagai pemancar gelombang ultrasonik  dan rangkaian receiver sebagai penerima gelombang ultrasonik. Transmitter sensor akan memancarkan sinyal ultrasonik dan saat sinyal ultrasonik mengenai sebuah penghalang, maka sinyal ultrasonik akan dipantulkan. Sinyal ultrasonik yang dipantulkan akan diterima oleh receiver sensor. Mikrokontroller digunakan untuk mengolah dan menghitung sinyal yang diterima oleh rangkaian receiver sensor sehingga jarak sensor terhadap benda di depannya atau bidang pantul dapat diketahui. Agar lebih jelas perhatikan ilustrasi dibawah ini.</p>
+<p><img src="images/01.png" alt=""></p>
+<p>Sinyal ultrasonik yang dipancarkan tersebut akan merambat sebagai sinyal atau gelombang bunyi dengan kecepatan bunyi yang berkisar 340 m/s. Dengan demikian, untuk menentukan jarak benda dengan pantulan dapat ditentukan dengan menggunakan rumus:</p>
+<p><code>S = 340.t/2</code></p>
+<p>dimana,<br><code>S</code> adalah jarak antara sensor ultrasonik dengan bidang pantul</p>
+<p><code>t</code> adalah selisih waktu antara pemancaran gelombang ultrasonik sampai diterima kembali oleh bagian penerima/receiver sensor ultrasonic</p>
+<p>Penggunaan Sensor Ultrasonik meliputi berbagai bidang, seperti :</p>
+<p>Dunia Kesehatan: </p>
+<ul>
+<li>Mendeteksi organ-organ dan penyakit dalam tubuh manusia dengan USG</li>
+</ul>
+<p>Dunia Industri:</p>
+<ul>
+<li>Mendeteksi suatu objek dalam proses produksi barang</li>
+<li>Mendeteksi keberadaan mineral dan bahan-bahan tambang.</li>
+</ul>
+<p>Dunia Robotika:</p>
+<ul>
+<li>Sebagai pengganti indra pada robot untuk mengetahui jarak.</li>
+</ul>
+<p>Dunia Maritim: </p>
+<ul>
+<li>Sebagai Radar</li>
+</ul>
+<p><img src="images/02.png" alt="Sensor Ultrasonic HC-SR04"></p>
+<p>Sensor Ultrasonic HC-SR04</p>
+<h3 id="nodemcu-development-board">NodeMCU Development Board</h3>
+<p>NodeMCU adalah mikrokontroller yang dibuat berdasarkan chip WiFi ESP8266, jadi NodeMCU adalah seperti arduino biasa yang dapat di flash instruksi tertentu sesuai dengan keinginan kita namun memiliki fitur WiFi, sehingga dapat berinteraksi dengan perangkat client jaringan atau bahkan dengan internet. </p>
+<p>NodeMCU juga merupakan development board yang juga menyediakan firmware berbasis eLua untuk chip WiFi ESP8266 dari vendor Espressif. Firmwarenya berbasis Espressif NON-OS SDK dan menggunakan file system berbasis spiffs. Repositori kodenya sendiri berisi 98.1% C-code. Firmware NodeMCU adalah projek pendukung dari development kit NodeMCU yang sangat populer, yang juga menyertakan development board open-source siap pakai yang menggunakan chip ESP8266-12E.</p>
+<p>Pemrograman NodeMCU dapat dilakukan dengan mudah sebagaimana menggunakan Arduino. Perbedaan utamanya adalah pada bagian penomeran pin dari boardnya, seperti terlihat pada gambar berikut:</p>
+<p><img src="images/03.png" alt=""></p>
+<p>Ada beberapa jenis development board NodeMCU yang umum di jual di pasaran, yaitu jenis Amica dan Lolin. Yang membedakan diantara keduanya hanya pada ukuran dan urutan nomor dari GPIO pin  nya.</p>
+<p><img src="images/04.png" alt=""></p>
+<p>NodeMCU versi Lolin</p>
+<p><img src="images/05.png" alt=""></p>
+<p>NodeMCU versi AMICA </p>
+<h3 id="project-1-menampilkan-pada-serial-monitor">Project 1 Menampilkan pada Serial Monitor</h3>
+<p>Pada project awal ini akan dilakukan percobaan untuk bagaimana menerapakan atau mengimplementasikan pembacaan sensor ultrasonic untuk kemudian ditampilkan pada serial monitor yang ada pada IDE Arduino, siapkan beberapa komponen yang dibutuhkan dan rangkailah komponen tersebut pada project board. </p>
+<p><strong>Hardware Preparation:</strong></p>
+<ul>
+<li>NodeMCU</li>
+<li>Micro USB cable</li>
+<li>PC/laptop</li>
+<li>Software Arduino IDE</li>
+<li>Kabel jumper</li>
+<li>Sensor Ultrasonik HC-SR04</li>
+</ul>
+<p><strong>Rangkaian</strong></p>
+<p><img src="images/06.png" alt="Rangkaian"></p>
+<p>Sensor Ultrasonik HC-SR04</p>
+<ul>
+<li><code>Pin Trigger</code> dihubungkan ke pin <code>D3</code> NodeMCU</li>
+<li><code>Pin Echo</code> dihubungkan ke pin <code>D4</code> NodeMCU</li>
+<li><code>VCC</code> dihubungkan ke <code>VU</code> NodeMCU</li>
+<li><code>GND</code> dihubungkan ke <code>GND</code> NodeMCU</li>
+</ul>
+<p><strong>Syntax Program</strong></p>
+<p>Setelah rangkaian elektrik telah selesai anda rangkai, selanjutnya hal yang perlu anda lakukan adalah menulis syntax program sesuai dengan nomor pin dari rangkaian elektrik tersebut. Berikut ini langkah-langkah dalam menulis serta uploading pada nodeMCU:</p>
+<ol>
+<li><p>Tulis sytax program berikut</p>
+<pre><code class="lang-cpp"> <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> triggerPin D3</span>
+ <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> echoPin D4</span>
+
+ <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+     Serial.begin (<span class="hljs-number">9600</span>);
+     pinMode(triggerPin, OUTPUT);
+     pinMode(echoPin, INPUT);
+     pinMode(BUILTIN_LED, OUTPUT);
+ }
+
+ <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+     <span class="hljs-keyword">long</span> duration, jarak;
+     digitalWrite(triggerPin, LOW);
+     delayMicroseconds(<span class="hljs-number">2</span>);
+     digitalWrite(triggerPin, HIGH);
+     delayMicroseconds(<span class="hljs-number">10</span>);
+     digitalWrite(triggerPin, LOW);
+     duration = pulseIn(echoPin, HIGH);
+     jarak = (duration/<span class="hljs-number">2</span>) / <span class="hljs-number">29.1</span>;
+     Serial.print(jarak);
+     Serial.println(<span class="hljs-string">&quot; cm&quot;</span>);
+     delay(<span class="hljs-number">1000</span>);
+ }
+</code></pre>
+</li>
+<li><p>Pilih Board NodeMCU dengan klik menu <code>Tools -&gt; Board -&gt; NodeMCU 1.0 (ESP-12E Module)</code></p>
+<p> <img src="images/07.png" alt=""></p>
+</li>
+<li><p>Kemudian Pastikan Port telah sesuai dengan perangkat anda</p>
+</li>
+<li>Upload Sketch program diatas ke board NodeMCU</li>
+<li>Segera setelah proses compile dan upload selesai dan berhasil, buka Serial Monitor dengan baudrate 9600.</li>
+<li>Kemudian coba tempatkan benda di depan sensor ultrasonik, maka akan tampil hasil jaraknya.</li>
+</ol>
+<h3 id="project-2-menampilkan-pada-lcd-i2c">Project 2 Menampilkan pada LCD I2C</h3>
+<p>Pada project kedua ini akan dilakukan percobaan untuk bagaimana menampilkan hasil keluaran dari sensor ultrasonik pada Layar LCD I2C secara real time, siapkan beberapa komponen yang dibutuhkan dan rangkailah komponen tersebut pada project board.</p>
+<p><strong>Hardware Preparation:</strong></p>
+<ol>
+<li>NodeMCU</li>
+<li>Micro USB cable</li>
+<li>PC/laptop</li>
+<li>Software Arduino IDE</li>
+<li>Kabel jumper</li>
+<li>Sensor Ultrasonik HC-SR04</li>
+<li>LCD I2C</li>
+</ol>
+<p><strong>Rangkaian:</strong></p>
+<p>Rangkailah komponen-komponen yang diperlukan seperti pada gambar berikut</p>
+<p><img src="images/08.png" alt="Rangkaian"></p>
+<ol>
+<li>Masukkan library LCD I2C pada Arduino IDE,</li>
+<li><p>Selanjutnya tuliskan kode program berikut pada IDE Arduino</p>
+<pre><code class="lang-cpp"> <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;Wire.h&gt;</span></span>
+ <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;LiquidCrystal_I2C.h&gt;</span></span>
+ <span class="hljs-function">LiquidCrystal_I2C <span class="hljs-title">lcd</span><span class="hljs-params">(<span class="hljs-number">0x27</span>, <span class="hljs-number">16</span>, <span class="hljs-number">2</span>)</span></span>; <span class="hljs-comment">//atau 0x3F</span>
+
+ <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> triggerPin D3</span>
+ <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> echoPin D4</span>
+
+ <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+     lcd.begin();
+     pinMode(triggerPin, OUTPUT);
+     pinMode(echoPin, INPUT);
+     pinMode(BUILTIN_LED, OUTPUT);
+ }
+
+ <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+     lcd.clear();
+     <span class="hljs-keyword">long</span> duration, jarak;
+     digitalWrite(triggerPin, LOW);
+     delayMicroseconds(<span class="hljs-number">2</span>);
+     digitalWrite(triggerPin, HIGH);
+     delayMicroseconds(<span class="hljs-number">10</span>);
+     digitalWrite(triggerPin, LOW);
+     duration = pulseIn(echoPin, HIGH);
+     jarak = (duration/<span class="hljs-number">2</span>) / <span class="hljs-number">29.1</span>;
+     lcd.setCursor(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);
+     lcd.print(<span class="hljs-string">&quot;Jarak : &quot;</span>);
+     lcd.print(jarak);
+     lcd.print(<span class="hljs-string">&quot; cm&quot;</span>);
+     delay(<span class="hljs-number">1000</span>);
+ }
+</code></pre>
+</li>
+<li>Upload Sketch program diatas ke board NodeMCU</li>
+<li>Segera setelah proses compile dan upload selesai dan berhasil, </li>
+<li>Kemudian coba tempatkan benda di depan sensor ultrasonik, maka akan tampil hasil jaraknya pada Layar LCD</li>
+</ol>
+<h3 id="tugas">Tugas</h3>
+<ul>
+<li>Kembangkan rangkaian dan kode programnya dimana:<ul>
+<li>Terdapat tambahan 3 LED, </li>
+<li>LED1 menyala jika jarak yang terbaca 1 cm</li>
+<li>LED2 menyala jika jarak yang terbaca 2 cm</li>
+<li>LED3 menyala jika jarak yang terbaca  3 cm</li>
+<li>LED menyala semua dan berkedip kedip selama 1 detik jika jarak melebihi dari 3 cm</li>
+</ul>
+</li>
+<li>Kerjakan projek di atas dengan membuat rancangan rangkaiannya terlebih dahulu ke dalam Fritzing</li>
+<li>Buat kode program seperti contoh di atas sampai berhasil</li>
+<li>Buat laporannya</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../05/06-rfid.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 07. RFID">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"08. Sensor Ultrasonic","level":"1.10","depth":1,"next":{"title":"09. UTS","level":"1.11","depth":1,"ref":"","articles":[]},"previous":{"title":"07. RFID","level":"1.9","depth":1,"path":"05/06-rfid.md","ref":"05/06-rfid.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"06/07-ultrasonic.md","mtime":"2020-06-28T16:08:15.080Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-28T16:08:58.372Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

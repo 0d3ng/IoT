@@ -1,0 +1,678 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>12. Local Server · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../10/10-monitoring-controlling-local-server.html" />
+    
+    
+    <link rel="prev" href="../08/08-socket-server.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Pendahuluan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    01. Memahami Konsep dan arsitektur IoT
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    02. Microcontroller
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../01/01.installasi-dan-konfigurasi.html">
+            
+                <a href="../01/01.installasi-dan-konfigurasi.html">
+            
+                    
+                    03. Instalasi, Konfigurasi software & Hardware pendukung
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../02/02-led.html">
+            
+                <a href="../02/02-led.html">
+            
+                    
+                    04. Implementation NodeMCU LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../03/05-Sensor-suhu-dan-kelembaban.html">
+            
+                <a href="../03/05-Sensor-suhu-dan-kelembaban.html">
+            
+                    
+                    05. Implementasi sensor suhu dan kelembaban
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../04/06-sensor-cahaya.html">
+            
+                <a href="../04/06-sensor-cahaya.html">
+            
+                    
+                    06. Sensor Cahaya
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../05/06-rfid.html">
+            
+                <a href="../05/06-rfid.html">
+            
+                    
+                    07. RFID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../06/07-ultrasonic.html">
+            
+                <a href="../06/07-ultrasonic.html">
+            
+                    
+                    08. Sensor Ultrasonic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    09. UTS
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../07/07-socket-client.html">
+            
+                <a href="../07/07-socket-client.html">
+            
+                    
+                    10. Socket Client
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../08/08-socket-server.html">
+            
+                <a href="../08/08-socket-server.html">
+            
+                    
+                    11. Socket Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.14" data-path="09-local-server.html">
+            
+                <a href="09-local-server.html">
+            
+                    
+                    12. Local Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../10/10-monitoring-controlling-local-server.html">
+            
+                <a href="../10/10-monitoring-controlling-local-server.html">
+            
+                    
+                    13. Monitoring dan Controlling pada Local Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" >
+            
+                <span>
+            
+                    
+                    Nilai
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../nilai/01-ti-3b.html">
+            
+                <a href="../nilai/01-ti-3b.html">
+            
+                    
+                    TI-3B
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../nilai/02-ti-3c.html">
+            
+                <a href="../nilai/02-ti-3c.html">
+            
+                    
+                    TI-3C
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >12. Local Server</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="installasi-dan-konfigurasi-iot-local-server-dengan-raspberry-pi">Installasi dan konfigurasi IoT Local Server Dengan Raspberry Pi</h1>
+<h2 id="tujuan">Tujuan</h2>
+<ul>
+<li>Mampu menginstalasi dan mengkonfigurasi Linux Mate dan aplikasi IoT Blynk Server pada Raspberry Pi 3</li>
+<li>Mampu menjalankan service IoT Blynk server pada Raspberry Pi 3</li>
+</ul>
+<h2 id="capaian">Capaian</h2>
+<ul>
+<li>Menjelaskan tahapan instalasi Blynk IoT Server pada Raspberry PI 3</li>
+<li>Mengkonfigurasi Blynk Server pada Raspberry PI 3</li>
+</ul>
+<h2 id="teori-singkat">Teori Singkat</h2>
+<h3 id="raspberry-pi">Raspberry Pi</h3>
+<p>Raspberry Pi, sering disingkat dengan nama Raspi, adalah komputer papan tunggal (single-board circuit; SBC) yang seukuran dengan kartu kredit yang dapat digunakan untuk menjalankan program perkantoran, permainan komputer, dan sebagai pemutar media hingga video beresousi tinggi. Raspberry Pi dikembangkan oleh yayasan nirlaba, Rasberry Pi Foundation, yang digawangi sejumlah pengembang dan ahli komputer dari Universitas Cambridge, Inggris. Ide dibalik Raspberry Pi diawali dari keinginan untuk mencetak pemrogram generasi baru. Seperti disebutkan dalam situs resmi Raspberry Pi Foundation, waktu itu Eben Upton, Rob Mullins, Jack Lang, dan Alan Mycroft, dari Laboratorium Komputer Universitas Cambridge memiliki kekhawatiran melihat kian turunnya keahlian dan jumlah siswa yang hendak belajar ilmu komputer. Mereka lantas mendirikan yayasan Raspberry Pi bersama dengan Pete Lomas dan David Braben pada 2009. Tiga tahun kemudian, Raspberry Pi Model B memasuki produksi massal. Dalam peluncuran pertamanya pada akhir Febuari 2012 dalam beberapa jam saja sudah terjual 100.000 unit. Pada bulan Februari 2016, Raspberry Pi Foundation mengumumkan bahwa mereka telah menjual 8 juta perangkat Raspi, sehingga menjadikannya sebagai perangkat paling laris di Inggris. </p>
+<p><img src="images/image001.jpg" alt=""></p>
+<p>Berikut ini spesifikasi dari Raspberry Pi 3 : </p>
+<ul>
+<li>SoC: Broadcom BCM2837 </li>
+<li>CPU: 4&#xD7; ARM Cortex-A53, 1.2GHz </li>
+<li>GPU: Broadcom VideoCore IV </li>
+<li>RAM: 1GB LPDDR2 (900 MHz) </li>
+<li>Networking: 10/100 Ethernet, 2.4GHz 802.11n wireless </li>
+<li>Bluetooth: Bluetooth 4.1 Classic, Bluetooth Low Energy </li>
+<li>Storage: microSD </li>
+<li>GPIO: 40-pin header, populated </li>
+<li>Ports: HDMI, 3.5mm analogue audio-video jack, 4&#xD7; USB 2.0, Ethernet, Camera Serial Interface (CSI), Display Serial Interface (DSI) </li>
+</ul>
+<p>Dibangun dengan sistem-on-chip (SoC) Broadcom BCM2837 yang mencakup empat fitur : ARM Cortex-A53 processing core berjalan pada 1.2GHz dengan 32KB Level 1 dan 512 KB Level 2 cache memory, sebuah prosesor grafis VideoCore IV , dan terhubung dengan modul memori 1GB LPDDR2 di bagian belakang papan. Raspberry Pi terbaru menawarkan dukungan operasi multi-threaded dengan mengambil keunggulan dari empat processing core pada Pi 2 dan Pi 3. SysBench mengungkapkan pengembangan desain Raspberry Pi dari pertama hingga terakhir, menunjukkan kinerja single-threaded telah meningkat pesat, dan keunggulan terbesar pada saat dijalankannya program multi-threaded </p>
+<h3 id="blynk">Blynk</h3>
+<p>Blynk mendukung platform perangkat keras seperti Arduino, Raspberry Pi, dan papan mikrokontroler serupa untuk membangun perangkat keras untuk proyek Anda. Berikut ini adalah daftar dari beberapa papan mikrokontroler yang dapat digabungkan dengan Blynk: </p>
+<ul>
+<li>Espressif (ESP8266, ESP32, NodeMCU, WeMos D1, Adafruit HUZZAH, SparkFun Blynk Board, SparkFun ESP8266 Thing) </li>
+<li>Linux (C ++) (Raspberry Pi, Ubuntu) </li>
+<li>Arduino (Arduino UNO, Arduino MKR1000, Arduino MKRZero, Arduino Yun, </li>
+<li>Arduino 101, Arduino Nol, Arduino M0, Arduino M0 Pro, Arduino Nano, Arduino 
+Leonardo, Arduino Karena, Arduino Mega 2560, Arduino Mega 1280, Arduino 
+Mega ADK , Arduino Pro Micro, Arduino Mini, Arduino Pro Mini, Arduino Fio, 
+Arduino Decimilia, Arduino Duemilanove, Arduino Pro, Arduino Ethernet, 
+Arduino Leonardo ETH, Arduino Industrial 101) </li>
+</ul>
+<p>Anda dapat membaca daftar perangkat keras terbaru yang dapat Anda gunakan dengan Blynk di <a href="https://github.com/blynkkk/blynkkk.github.io/blob/master/SupportedHardware.md" target="_blank">sini</a> </p>
+<h4 id="jenis-koneksi">Jenis koneksi</h4>
+<p>Blynk mendukung jenis koneksi berikut untuk menghubungkan papan mikrokontroler Anda (perangkat keras) dengan Blynk Cloud dan server pribadi Blynk: </p>
+<ul>
+<li>Ethernet </li>
+<li>Wi-Fi </li>
+<li>Bluetooth </li>
+<li>Seluler </li>
+<li>Serial </li>
+</ul>
+<h4 id="arsitektur-blynk">Arsitektur Blynk</h4>
+<p>Platform Blynk meliputi komponen berikut: </p>
+<ul>
+<li>Aplikasi mobile Blynk : Memungkinkan Anda membangunaplikasi untuk proyek Anda menggunakan berbagai widget. Ini tersedia untuk platform Android dan iOS. </li>
+<li>Server Blynk : Bertanggung jawab untuk semua yangkomunikasi antara perangkat seluler Anda yang menjalankan aplikasi Blynk dan perangkat keras. Anda dapat menggunakan Blynk Cloud atau menjalankan server Blynk pribadi Anda secara lokal. Ini open source, dapat dengan mudah menangani ribuan perangkat, dan bahkan dapat diluncurkan pada Raspberry Pi. </li>
+<li>Library Blynk : Memungkinkan komunikasi dengan paraserver dan memproses semua perintah masuk dan keluar dari aplikasi Blynk dan perangkat keras Anda. Mereka tersedia untuk semua platform perangkat keras yang populer. </li>
+</ul>
+<p>Semua komponen yang disebutkan di atas saling berkomunikasi satu sama lain untuk membangun aplikasi IoT yang berfungsi penuh yang dapat dikontrol dari mana saja melalui tipe konektivitas yang telah dikonfigurasikan sebelumnya. Anda dapat mengontrol perangkat keras Anda dari aplikasi Blynk yang berjalan di perangkat seluler Anda melalui Blynk Cloud atau server pribadi Blynk. Ini bekerja dengan mengirim baris data yang diproses dari perangkat keras ke aplikasi Blynk Anda. </p>
+<h2 id="praktikum-1-menyiapkan-server-blynk-di-raspberry-pi">Praktikum 1 Menyiapkan server Blynk di Raspberry Pi</h2>
+<p>Berikut meruapakan Langkah-langkah untuk melakukan instalasi serta mengatur local server Blynk pada RaspberryPi. Server Blynk mendukung semua versi board Raspberry Pi. Namun, Raspberry Pi 3 ke-atas memberikan kinerja yang lebih baik untuk menjalankan local server. 
+Untuk tujuan pengujian, Anda dapat menggunakan papan Raspberry Pi 3 untuk menjalankan local server Blynk.  </p>
+<h3 id="hardware-preparation">Hardware Preparation:</h3>
+<ul>
+<li>RaspberryPi 3 </li>
+<li>Micro USB cable </li>
+<li>PC/laptop </li>
+</ul>
+<h3 id="skema">Skema</h3>
+<p><img src="images/image002.jpg" alt=""></p>
+<ol>
+<li>Dengan menggunakan Putty, masuk ke Raspberry Pi Anda melalui SSH. </li>
+<li><p>Instal Java 8 menggunakan perintah berikut: </p>
+</li>
+<li><p>Verifikasi versi Java menggunakan perintah berikut: 
+ <code>shell script
+ pi@raspberrypi:~ $ java -version</code>  </p>
+</li>
+<li>Unduh file JAR server Blynk menggunakan perintah berikut:
+ <code>shell script
+ wget https://github.com/blynkkk/blynk-server/releases/download/v0.41.12/server-0.41.12-java8.jar</code>       </li>
+<li>Beri nama file <code>server-0.41.12-java8.jar</code> untuk server Blynk yang akan diunduh ke Raspberry Pi. </li>
+<li>Jalankan server (file JAR) pada port default perangkat keras 8080 dan port aplikasi default 9443(port SSL): 
+<code>shell script
+java -jar server-0.41.12-java8.jar -dataFolder /home/pi/Blynk</code> </li>
+<li>Anda akan mendapatkan output berikut untuk pertama kalinya: 
+<code>shell script
+Blynk Server successfully started.
+All server output is stored in current folder in &apos;logs/blynk.log&apos; file.</code> </li>
+<li>Email dan kata sandi yang diberikan digunakan untuk masuk sebagai admin di aplikasi Blynk yang berjalan perangkat smartphone anda </li>
+<li>Lakukan restart, Anda akan mendapatkan output berikut: 
+<code>shell script
+Blynk Server 0.41.12-SNAPSHOT successfully started. 
+All server output is stored in folder &apos;/home/pi/logs&apos; file.</code></li>
+</ol>
+<h3 id="mengaktifkan-autostart-dengan-rclocal">Mengaktifkan autostart dengan rc.local</h3>
+<p>Anda dapat mengkonfigurasi Raspberry Pi untuk melakukan autostart server Blynk Anda ketika sistem dimulai: </p>
+<ol>
+<li>Di Raspberry Pi Anda, edit /etc/rc.local file menggunakan editor nano: 
+ <code>shell script
+ pi@raspberrypi:~ $sudonano /etc/rc.local</code> </li>
+<li>Tambahkan perintah berikut setelah komentar, dan tambahkan exit 0 pada baris akhir, kemudian simpan file ( Ctrl + O , diikuti oleh  Enter ) dan Keluar ( Ctrl + X ): </li>
+<li><p>Dan lakukan reboot pada perangkat anda 
+ <code>shell script
+ pi@raspberrypi:~ $java -jar /home/pi/server-0.41.12.jar -dataFolder 
+ /home/pi/Blynk &amp; pi@raspberrypi:~ $sudo reboot</code>
+ <img src="images/image003.jpg" alt=""></p>
+</li>
+<li><p>Memverifikasi bahwa server Blynk sedang berjalan 
+ Ketika Anda me-restart Raspberry Pi dengan konfigurasi autostart, maka server Blynk akan di-autostart setelah perangkat menyala kembali. Anda bisa memverifikasi hal tersebut dengan menjalankan perintah berikut:
+ <code>shell script
+ pi@raspberrypi:~ $ps -aux | grep java</code></p>
+</li>
+</ol>
+<blockquote>
+<p>Selain menggunakan raspberry, Anda juga dapat menggunakan laptop. Yang terpenting dalah java harus sudah terinstall. 
+Sedangkan langkah <code>Mengaktifkan autostart dengan rc.local</code> harus disesuaikan dengan os yang digunakan, misalkan windows 
+tentunya ada langkah tersendiri. Untuk langkah detailnya bisa dibaca di <a href="https://github.com/blynkkk/blynk-server" target="_blank">sini</a></p>
+</blockquote>
+<h3 id="docker">Docker</h3>
+<p>Docker merupakan sebuah kumpulan paket dari sebuah platform yang menggunakan level OS sebagai virtualisasi dengan tujuan untuk
+mendistribusikan perangkat lunak dalam sebuah paket. Paket tersebut disebut dengan istilah container. Antara container terisolasi
+satu dengan yang lainnya dan dibungkus dalam perangkat lunak yang akan didistribusikan, library, dan file konfigurasi. 
+Walapun antara kontainer terisolasi, tetapi antara kontainer bisa berkomunikasi dengan kontainer lainnya menggunakan channel yang didefiniskan.</p>
+<blockquote>
+<p>Secara detail tidak akan dijelaskan tentang docker, karena sangat luas sekali pembahasan tersebut. Mungkin membutuhkan
+waktu 1 semester untuk mempelajari platform ini.</p>
+</blockquote>
+<p>Untuk mengunduh docker dapat didapatkan di <a href="https://www.docker.com/products/docker-desktop" target="_blank">sini</a></p>
+<h4 id="install-blynk">Install Blynk</h4>
+<p>Setelah terinstall, jalankan perintah di bawah ini pada commmand prompt atau terminal.</p>
+<pre><code>$ docker run --name blynk -p 8080:8080 -p 8441:8441 -p 9443:9443 mpherg/blynk-server:latest
+Blynk Server 0.41.10 successfully started.
+All server output is stored in folder &apos;/data/logs&apos; file.
+Your Admin url is https://172.17.0.2:9443/admin
+Your Admin login email is admin@blynk.cc
+Your Admin password is admin
+</code></pre><p>Perintah tersebut di atas adalah ketika blynk belum ada, maka akan download di repository docker (hub.docker.com) dengan 
+versi yang terbaru. Tetapi ketika di laptop sudah ada dan versinya audah terbaru maka tidak akan mendownload.</p>
+<ul>
+<li><code>-p 8080:8080 -p 8441:8441 -p 9443:9443</code> adalah container(blynk) exposed atau membuka port yang dapat diakses dari luar.
+8080 adalah port http, 8441 adalah port mqtt, dan 9443 adalah port https.</li>
+<li><code>mpherg/blynk-server:latest</code> nama image yang dijalankan atau akan didownload.</li>
+<li><code>--name blynk</code> adalah nama container, sebenarnya optional dan ketika tidak diset maka akan random untuk penamaannya.</li>
+</ul>
+<p>Selanjutnya, jalankan perintah di bawah ini untuk ngecek apakah blynk sudah jalan atau belum di docker</p>
+<pre><code>$docker ps
+CONTAINER ID        IMAGE                        COMMAND                  CREATED             STATUS              PORTS                                                                    NAMES
+d56f0cc9139d        mpherg/blynk-server:latest   &quot;java -jar /blynk/se&#x2026;&quot;   18 seconds ago      Up 17 seconds       0.0.0.0:8080-&gt;8080/tcp, 0.0.0.0:8441-&gt;8441/tcp, 0.0.0.0:9443-&gt;9443/tcp   blynk
+</code></pre><h2 id="praktikum-2-menghubungkan-aplikasi-mobile-blynk-dengan-lokal-server">Praktikum 2 Menghubungkan aplikasi mobile Blynk dengan lokal server</h2>
+<p>Pada umunya aplikasi mobile Blynk bekerja dengan menggunakan Blynkcloud dengan cara menghubungkannya melalui internet. Jika Anda ingin menghubungkan aplikasi mobile Blynk Anda dengan server Blynk pribadi (local server), Anda harus mengonfigurasi beberapa atribut pada aplikasi mobile Blynk. Atribut ini akan membantu Anda menemukan server Blynk pribadi yang digunakan pada jaringan yang sama (yaitu, jaringan Wi-Fi rumah Anda). Jika Anda ingin mengakses server Blynk pribadi dari internet, Anda dapat menggunakan penerusan port untuk mengaksesnya. Untuk melakukan ini, Anda juga memerlukan alamat IP statis.</p>
+<blockquote>
+<p>Anda harus download blynk untuk aplikasi mobile, dapat didapatkan di <a href="https://play.google.com/store/apps/details?id=cc.blynk&amp;hl=en_US" target="_blank">sini</a> </p>
+</blockquote>
+<ol>
+<li>Pertama, Anda harus mengonfigurasi jalur server tersendiri untuk server Blynk pribadi Anda yang berjalan di Raspberry Pi atau laptop Anda. </li>
+<li><p>Di halaman login, ketuk Create New Account:
+<img src="images/image004.jpg" alt=""></p>
+</li>
+<li><p>Ketuk ikon tiga titik untuk melihat pengaturan server: 
+<img src="images/image005.jpg" alt=""></p>
+</li>
+<li><p>Geser tombol sakelar dari BLYNK ke CUSTOM: 
+<img src="images/image006.jpg" alt=""></p>
+</li>
+<li><p>Masukkan alamat IP Raspberry Pi atau laptop Anda sesuaikan dengan IP pada perangkat Anda masing-masing (misal, 192.168.1.4) dan nomor port. Port default untuk server Blynk adalah 9443. Lalu, ketuk OK untuk menyimpan pengaturan:<br><img src="images/image007.jpg" alt="">
+Pengaturan server &#x2014; langkah 1 </p>
+</li>
+<li><p>Ketikkan nama pengguna (alamat email) dan kata sandi untuk akun pengguna baru. </p>
+</li>
+<li>Ketuk Sign Up untuk membuat akun. Anda dapat melihat pesan <code>Connecting&#x2026;</code> di bagian bawah halaman saat membuat akun. </li>
+<li>Setelah membuat akun, aplikasi akan menunjukkan tips tentang cara kerja energi. Ketuk tombol <code>Cool! Got it</code> dan Anda akan pergi ke dasbor proyek: </li>
+</ol>
+<h2 id="praktikum-3-membuat-proyek-baru-untuk-mendapatkan-token-autentikasi">Praktikum 3 Membuat proyek baru untuk mendapatkan token autentikasi</h2>
+<p>Untuk menjalankan proyek, Anda akan memerlukan token autentikasi terkait dengan proyek pembuat aplikasi Blynk di bawah server pribadi Blynk Anda: </p>
+<ol>
+<li><p>Ketuk <code>New Project</code>. Anda akan mendapatkan tampilan halaman Create New Project seperti berikut: </p>
+<p> <img src="images/image008.jpg" alt=""></p>
+</li>
+<li><p>Pada halaman <code>Create New Project</code>, isikan nama proyek di <code>Project Name</code> dan pilih jenis perangkat keras yang anda pakai. Dalam hal ini, Anda harus memilih model controller IoT yang akan digunakan atau tempat menjalankan program. misalkan ESP2866. Lalu, ketuk OK: 
+<img src="images/image009.jpg" alt=""></p>
+</li>
+<li><p>Sekarang, halaman <code>Create New Project</code> Anda seharusnya terlihat seperti tangkapan layar sebelumnya. Ketuk tombol Create untuk membuat ruang kerja proyek: 
+<img src="images/image010.jpg" alt=""></p>
+</li>
+<li><p>Anda akan mendapatkan pemberitahuan tentang token autentikasi. Ketuk OK untuk menutup pesan: 
+<img src="images/image011.jpg" alt=""></p>
+</li>
+<li><p>Ketuk ikon Project Settings pada bilah alat untuk membuka halaman Project Settings. Di bawah AUTH TOKENS, ketuk Copy all. Token autentik akan disalin ke clipboard: 
+<img src="images/image012.jpg" alt=""></p>
+</li>
+<li><p>Buka aplikasi Notepad (atau editor teks) dan paste item yang disalin untuk melihat token autentikasi: </p>
+</li>
+</ol>
+<h2 id="praktikum-4-menggunakan-antarmuka-administrasi">Praktikum 4 Menggunakan antarmuka administrasi</h2>
+<p>Mengacu pada langkah-langkah berikut, Anda dapat membuka antarmuka administrasi dengan memasukkan alamat berikut di browser web: </p>
+<ol>
+<li>Membuka halaman admin di web browser 
+ <code>shell script
+ https://IP_ADDRESS:9443/admin</code></li>
+<li>Ketik kredensial administrator default untuk login. Berikut adalah kredensial login default untuk admin: 
+ <code>shell script
+ Email address: admin@blynk.cc 
+ Password: admin</code></li>
+<li><p>Klik Sign-in untuk masuk ke antarmuka administrator: 
+<img src="images/image013.jpg" alt=""></p>
+</li>
+<li><p>Selanjutnya anda kemudian akan melihat dasbor sebagai berikut:
+<img src="images/image014.jpg" alt=""> </p>
+</li>
+<li><p>Di daftar sebelah kiri, klik Users. Anda akan mendapatkan yang daftar akun pengguna yang terdaftar di server Blynk lokal Anda, termasuk admin:
+<img src="images/image015.jpg" alt=""> </p>
+</li>
+<li><p>Di panel navigasi sebelah kiri, klik Config. Anda akan mendapatkan daftar konfigurasi untuk yang berikut:</p>
+<pre><code>twitter4j.properties: Ini diperlukan untuk pemberitahuan Twitter 
+single_token_mail_body.txt server.properties: Pengaturan yang terkait dengan server 
+mail.properties: Diperlukan untuk pemberitahuan email 
+gcm.properties: Diperlukan untuk pemberitahuan telepon 
+db.properties: Pengaturan yang terkait dengan database
+</code></pre></li>
+</ol>
+<h2 id="tugas">Tugas</h2>
+<p>Buat laporan dari hasil praktikum yang telah anda lakukan</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../08/08-socket-server.html" class="navigation navigation-prev " aria-label="Previous page: 11. Socket Server">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../10/10-monitoring-controlling-local-server.html" class="navigation navigation-next " aria-label="Next page: 13. Monitoring dan Controlling pada Local Server">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"12. Local Server","level":"1.14","depth":1,"next":{"title":"13. Monitoring dan Controlling pada Local Server","level":"1.15","depth":1,"path":"10/10-monitoring-controlling-local-server.md","ref":"10/10-monitoring-controlling-local-server.md","articles":[]},"previous":{"title":"11. Socket Server","level":"1.13","depth":1,"path":"08/08-socket-server.md","ref":"08/08-socket-server.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"09/09-local-server.md","mtime":"2020-06-28T16:08:15.088Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-28T16:08:58.372Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

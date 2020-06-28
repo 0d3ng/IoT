@@ -1,0 +1,724 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>13. Monitoring dan Controlling pada Local Server · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../09/09-local-server.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Pendahuluan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    01. Memahami Konsep dan arsitektur IoT
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    02. Microcontroller
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../01/01.installasi-dan-konfigurasi.html">
+            
+                <a href="../01/01.installasi-dan-konfigurasi.html">
+            
+                    
+                    03. Instalasi, Konfigurasi software & Hardware pendukung
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../02/02-led.html">
+            
+                <a href="../02/02-led.html">
+            
+                    
+                    04. Implementation NodeMCU LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../03/05-Sensor-suhu-dan-kelembaban.html">
+            
+                <a href="../03/05-Sensor-suhu-dan-kelembaban.html">
+            
+                    
+                    05. Implementasi sensor suhu dan kelembaban
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../04/06-sensor-cahaya.html">
+            
+                <a href="../04/06-sensor-cahaya.html">
+            
+                    
+                    06. Sensor Cahaya
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../05/06-rfid.html">
+            
+                <a href="../05/06-rfid.html">
+            
+                    
+                    07. RFID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../06/07-ultrasonic.html">
+            
+                <a href="../06/07-ultrasonic.html">
+            
+                    
+                    08. Sensor Ultrasonic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    09. UTS
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../07/07-socket-client.html">
+            
+                <a href="../07/07-socket-client.html">
+            
+                    
+                    10. Socket Client
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../08/08-socket-server.html">
+            
+                <a href="../08/08-socket-server.html">
+            
+                    
+                    11. Socket Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../09/09-local-server.html">
+            
+                <a href="../09/09-local-server.html">
+            
+                    
+                    12. Local Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15" data-path="10-monitoring-controlling-local-server.html">
+            
+                <a href="10-monitoring-controlling-local-server.html">
+            
+                    
+                    13. Monitoring dan Controlling pada Local Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" >
+            
+                <span>
+            
+                    
+                    Nilai
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../nilai/01-ti-3b.html">
+            
+                <a href="../nilai/01-ti-3b.html">
+            
+                    
+                    TI-3B
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../nilai/02-ti-3c.html">
+            
+                <a href="../nilai/02-ti-3c.html">
+            
+                    
+                    TI-3C
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >13. Monitoring dan Controlling pada Local Server</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="monitoring-dan-controlling-pada-iot-local-server">Monitoring dan Controlling pada IoT Local Server</h1>
+<h2 id="tujuan">Tujuan</h2>
+<ul>
+<li>Instalasi aplikasi Blynk (subscriber) pada perangkat mobile (Android, IPhone)</li>
+<li>Membuat design dan konfigurasi blynk client (subscriber), disesuaikan dengan Device MCU (sensor pada publisher)</li>
+<li>Menampilkan data logger sensor ke aplikasi blynk mobile</li>
+<li>Mengendalikan MCU (aktuator) dari subscriber blynk client</li>
+</ul>
+<h2 id="capaian">Capaian</h2>
+<ul>
+<li>Mampu menginstalasi dan mengkonfigurasi Blynk Client pada perangkat mobile android atau iPhone</li>
+<li>Mampu merancang antarmuka blynk client sebagai subscriber</li>
+<li>Mampu menampilkan data sensor dari MCU (publisher) ke blynk clinet mobile (subscriber)</li>
+<li>Mampu mengendalikan MCU dari blynk mobile</li>
+</ul>
+<h3 id="project-iot-blynk-local-server">Project IoT Blynk Local Server</h3>
+<p>Blynk.IO adalah IoT Server yang mana client yang mengakses lebih ditekankan pada perangkat bergerak, misalnya smartphone dan tablet. Blynk.IO menyediakan berbagai jenis platform seperti IOS untuk Iphone dan Android. Blynk.IO juga mendukung berbagai jenis device misalnya Arduino, NodeMCU. Anda dapat membaca lebih lanjut di halaman <a href="https://blynk.io/en/getting-started" target="_blank">https://blynk.io/en/getting-started</a>.</p>
+<h3 id="blynk-pada-nodemcu">Blynk Pada NodeMCU</h3>
+<p>Agar NodeMCU mengenali fitur-fitur yang terdapat pada Blynk, maka kita harus menambahkan library blynk ke dalam NodeMCU. Seperti biasa tambahkan melalui menu Tools &gt; Manage Libraries, ketikkan &#x201C;blynk&#x201D; untuk mencari library blynk.</p>
+<h3 id="desain-rancangan-smartdevice-nodemcu">Desain Rancangan Smartdevice NodeMCU</h3>
+<p>Adapun rancangan devicenya adalah sebagai berikut
+<img src="images/image002.jpg" alt=""></p>
+<blockquote>
+<p>Jika terdapatkan kesalahan pengkabelan atau pengalamatan input/output maka silahkan disesuaiakan. Gambar hanyalah ilustrasi, berdasarkan kode program saya anggap kalian sudah paham bagaimana seharusnya wiring yang benar.</p>
+</blockquote>
+<h3 id="kode-program-pada-nodemcu">Kode Program Pada NodeMCU</h3>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> BLYNK_PRINT Serial </span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;TinyGPS++.h&gt;</span> </span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;SoftwareSerial.h&gt;</span> </span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;SimpleTimer.h&gt;</span> </span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;ESP8266WiFi.h&gt;</span> </span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;BlynkSimpleEsp8266.h&gt;</span> </span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;SimpleDHT.h&gt;</span> </span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;LiquidCrystal_I2C.h&gt;</span> </span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;Servo.h&gt;</span> </span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> pinServo 13 Servo myservo; int degServo = 0; </span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> TX_GPS 14 </span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> RX_GPS 12 </span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> pinLedMerah 16 <span class="hljs-comment">//D0 pin led merah </span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> pinLedKuning 0 <span class="hljs-comment">//D3 pin led kuning </span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> pinLedHijau 2 <span class="hljs-comment">//D4 pin led hiaju </span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> pinDHT 10 <span class="hljs-comment">// SD3 pin signal sensor DHT </span></span>
+
+SimpleTimer timerDHT; 
+
+<span class="hljs-comment">//dibangkitkan saat membuat projek Blynk </span>
+<span class="hljs-comment">//cek di email konfirmasi Anda </span>
+<span class="hljs-keyword">char</span> auth[] = <span class="hljs-string">&quot;m6X-9KmShTi_mIi-EvMSRWF8N5auY6M5&quot;</span>; <span class="hljs-comment">//lokal server, sesuaikan dengan token blynk masing-masing </span>
+<span class="hljs-comment">//char auth[] = &quot;QGNNlp_hfvBCqhMuLxijr1_FoNzPrsP6&quot;; //Blynk server, sesuaikan dengan token blynk masing-masing </span>
+<span class="hljs-keyword">char</span> ssid[] = <span class="hljs-string">&quot;Fanny 2004&quot;</span>; <span class="hljs-comment">// SSID, silahkan disesuaikan </span>
+<span class="hljs-keyword">char</span> pass[] = <span class="hljs-string">&quot;fanny_200504&quot;</span>; <span class="hljs-comment">//Password AP, silahkan disesuaikan </span>
+
+<span class="hljs-function">SoftwareSerial <span class="hljs-title">UART_GPS</span><span class="hljs-params">(RX_GPS , TX_GPS)</span></span>; 
+TinyGPSPlus gps; 
+
+<span class="hljs-comment">//instan objek sensor dht11 </span>
+<span class="hljs-function">SimpleDHT11 <span class="hljs-title">dht11</span><span class="hljs-params">(pinDHT)</span></span>; 
+
+<span class="hljs-comment">//instan objek LCD I2C </span>
+<span class="hljs-function">LiquidCrystal_I2C <span class="hljs-title">lcd</span><span class="hljs-params">(<span class="hljs-number">0x27</span>, <span class="hljs-number">16</span>, <span class="hljs-number">2</span>)</span></span>; 
+
+<span class="hljs-comment">//membuat karakter derajat custom </span>
+<span class="hljs-comment">//https://maxpromer.github.io/LCD-Character-Creator/ </span>
+byte derajat[] = { 
+  B01110, 
+  B10001, 
+  B10001, 
+  B10001, 
+  B01110, 
+  B00000, 
+  B00000,   
+  B00000 
+}; 
+
+<span class="hljs-comment">//WidgetLCD lcd_blynk(V5); </span>
+<span class="hljs-function">WidgetMap <span class="hljs-title">myMap</span><span class="hljs-params">(V4)</span></span>; 
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{     
+  myservo.attach(pinServo);   
+  myservo.write(degServo);   
+
+  Serial.begin(<span class="hljs-number">9600</span>); 
+  UART_GPS.begin(<span class="hljs-number">9600</span>); <span class="hljs-comment">//inisialisasi GPS </span>
+  <span class="hljs-comment">//Blynk.begin(auth, ssid, pass); // blynk server </span>
+  Blynk.begin(auth, ssid, pass, <span class="hljs-string">&quot;192.168.1.4&quot;</span>, <span class="hljs-number">8080</span>); <span class="hljs-comment">//lokal server   pinMode(pinLedMerah, OUTPUT);   pinMode(pinLedKuning, OUTPUT);   pinMode(pinLedHijau, OUTPUT);   pinMode(pinDHT, INPUT);   KonfigurasiLCD(); </span>
+  timerDHT.setInterval(<span class="hljs-number">2000</span>, KelembabanSuhu); 
+  <span class="hljs-comment">//timerGPS.setInterval(2000, Lokasi_gps); </span>
+}  
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{   
+  Blynk.run();   
+  timerDHT.run();     
+  smartDelay(<span class="hljs-number">1000</span>); 
+  Lokasi_gps(); 
+} 
+
+BLYNK_WRITE(V5) 
+{   
+  degServo = param.asInt();  
+  myservo.write(degServo);   
+}  
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">KonfigurasiLCD</span><span class="hljs-params">()</span> </span>{   
+  lcd.begin(); <span class="hljs-comment">// Inisialisasi LCD   </span>
+  lcd.createChar(<span class="hljs-number">0</span>, derajat); 
+  lcd.backlight(); <span class="hljs-comment">// Menghidupkan backlight   </span>
+  lcd.setCursor(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);   
+  lcd.print(<span class="hljs-string">&quot; Welcome UNISBA &quot;</span>);   
+  lcd.setCursor(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>);   
+  lcd.print(<span class="hljs-string">&quot;   PROJECT 4    &quot;</span>);   
+  delay(<span class="hljs-number">3000</span>);   
+  lcd.clear(); 
+}  
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">KelembabanSuhu</span><span class="hljs-params">()</span> </span>{   
+  byte temperature;   
+  byte humidity; 
+  <span class="hljs-keyword">int</span> err = SimpleDHTErrSuccess; 
+
+  <span class="hljs-keyword">if</span> ((err = dht11.read(&amp;temperature, &amp;humidity, <span class="hljs-literal">NULL</span>)) != SimpleDHTErrSuccess) 
+  { 
+    Serial.print(<span class="hljs-string">&quot;Pembacaan DHT11 gagal, err=&quot;</span>); 
+    Serial.println(err);     
+    delay(<span class="hljs-number">1000</span>);
+    <span class="hljs-keyword">return</span>; 
+  } 
+
+  Serial.print(<span class="hljs-string">&quot;Sample OK: &quot;</span>); 
+  Serial.print((<span class="hljs-keyword">int</span>)temperature); 
+  Serial.print(<span class="hljs-string">&quot; *C, &quot;</span>); 
+  Serial.print((<span class="hljs-keyword">int</span>)humidity); 
+  Serial.println(<span class="hljs-string">&quot; H&quot;</span>); 
+  Serial.println(<span class="hljs-string">&quot;Derajat Servo: &quot;</span> + String(degServo)); 
+
+  Blynk.virtualWrite(V0, temperature); 
+  Blynk.virtualWrite(V1, humidity); 
+
+  lcd.clear(); 
+  <span class="hljs-comment">/* 
+  lcd.setCursor(0, 0); 
+  lcd.print(&quot;Temperatur: &quot; + String((int)temperature));   lcd.write(0);   lcd.print(&quot;C&quot;);   lcd.setCursor(0, 1); 
+  lcd.print(&quot;Kelembaban: &quot; + String((int)humidity) + &quot;H&quot;); 
+  */</span> 
+  lcd.setCursor(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>); 
+  lcd.print(<span class="hljs-string">&quot;Tem:&quot;</span> + String((<span class="hljs-keyword">int</span>)temperature));   lcd.write(<span class="hljs-number">0</span>);   lcd.print(<span class="hljs-string">&quot;C &quot;</span>); 
+  lcd.print(<span class="hljs-string">&quot;Hum:&quot;</span> + String((<span class="hljs-keyword">int</span>)humidity) + <span class="hljs-string">&quot;H&quot;</span>);     lcd.setCursor(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>);   
+  lcd.print(<span class="hljs-string">&quot;Servo Deg:&quot;</span> + String(degServo));   lcd.write(<span class="hljs-number">0</span>);   
+}  
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Lokasi_gps</span><span class="hljs-params">()</span> </span>{ 
+  Serial.println(<span class="hljs-string">&quot;Lat: &quot;</span> + String(gps.location.lat()) + <span class="hljs-string">&quot; - Lng: &quot;</span> + gps.location.lng()); 
+  Blynk.virtualWrite(V2, <span class="hljs-string">&quot;Lint.:&quot;</span> + String(gps.location.lat(), <span class="hljs-number">6</span>));   
+  Blynk.virtualWrite(V3, <span class="hljs-string">&quot;Bujur:&quot;</span> + String(gps.location.lng(), <span class="hljs-number">6</span>));   
+  myMap.location(<span class="hljs-number">2</span>, gps.location.lat(), gps.location.lng(), <span class="hljs-string">&quot;Lokasi Saya&quot;</span>); 
+}  
+
+<span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">smartDelay</span><span class="hljs-params">(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> ms)</span> 
+</span>{ 
+  <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> start = millis();   
+  <span class="hljs-keyword">do</span>   { 
+    <span class="hljs-keyword">while</span> (UART_GPS.available())       
+    gps.encode(UART_GPS.read());   
+  } <span class="hljs-keyword">while</span> (millis() - start &lt; ms); 
+}
+</code></pre>
+<h3 id="konfigurasi-pada-blynk-android">Konfigurasi Pada Blynk Android</h3>
+<p>Download dan install aplikasi blynk dari plystore </p>
+<p><img src="images/image003.jpg" alt="">  </p>
+<p>Buat koneksi antara Blynk sebagai subscriber dengan Raspberry Pi 3 sebagai server IoT. Pada kasus ini kita menggunakan local server yang saya sediakan.</p>
+<p><img src="images/image004.jpg" alt=""></p>
+<p><img src="images/image005.jpg" alt=""> </p>
+<blockquote>
+<p>Klik pada bagian titik tiga berbentuk vertikal untuk mengubah IP Server blynk.</p>
+</blockquote>
+<p><img src="images/image006.jpg" alt=""></p>
+<blockquote>
+<p>Pilih Custom untuk mengatur IP lokal Blynk Server, selanjutnya tuliskan IP server blynk</p>
+</blockquote>
+<p><img src="images/image007.jpg" alt=""></p>
+<blockquote>
+<p>Isikan username dan password sesuai dengan proses pendaftaran sebelumnya.</p>
+</blockquote>
+<p>Buat tampilan interface seperti berikut, dimana komponen widget terdiri dari: </p>
+<ul>
+<li>Button 3x </li>
+<li>Slider 1x </li>
+<li>Gauge 2x </li>
+<li>SuperChart 1x </li>
+<li>LCD 1x </li>
+<li>Map 1x </li>
+</ul>
+<p><img src="images/image008.jpg" alt=""> </p>
+<p><img src="images/image009.jpg" alt=""></p>
+<blockquote>
+<p>Buatlah widget seperti tampilan di atas</p>
+</blockquote>
+<h3 id="konfigurasi-button-d0-led-merah">Konfigurasi Button D0 (LED MERAH)</h3>
+<p><img src="images/image010.jpg" alt=""></p>
+<blockquote>
+<p>Kendali LED secara digital. D0 merujuk pada label alamat D0 NODEMCU </p>
+</blockquote>
+<h3 id="konfigurasi-button-d3-led-kuning">Konfigurasi Button D3 (LED KUNING)</h3>
+<p><img src="images/image011.jpg" alt=""> </p>
+<h3 id="konfigurasi-button-d4-led-hijau">Konfigurasi Button D4 (LED HIJAU)</h3>
+<p><img src="images/image012.jpg" alt=""> </p>
+<h3 id="konfigurasi-slider-kontrol-servo">Konfigurasi Slider Kontrol Servo</h3>
+<p><img src="images/image013.jpg" alt=""></p>
+<blockquote>
+<p>Tipe variabel adalah virtual, dengan alamat V5. Nilai minmal dan maksimal di sebelah kanannya. 
+<img src="images/image014.jpg" alt=""> </p>
+</blockquote>
+<h3 id="konfigurasi-gauge-temperatur">Konfigurasi Gauge Temperatur</h3>
+<p><img src="images/image015.jpg" alt=""></p>
+<blockquote>
+<p>Untuk memberikan satuan, bisa ditambahkan pada bagian LABEL 
+<img src="images/image016.jpg" alt=""> </p>
+</blockquote>
+<h3 id="konfigurasi-gauge-kelembaban">Konfigurasi Gauge Kelembaban</h3>
+<p><img src="images/image017.jpg" alt=""></p>
+<p><img src="images/image018.jpg" alt=""></p>
+<h3 id="konfigurasi-superchart-pergerakan-suhu-dan-kelembaban">Konfigurasi SuperChart (Pergerakan Suhu dan Kelembaban)</h3>
+<p><img src="images/image019.jpg" alt=""> </p>
+<blockquote>
+<p>Dalam satu chart terdapat 2 datastream, yaitu suhu dan kelembaban. Untuk menambahkan data stream silakan klik button
+<code>Add Datastream</code> </p>
+</blockquote>
+<p><img src="images/image020.jpg" alt=""></p>
+<p><img src="images/image021.jpg" alt=""></p>
+<p><img src="images/image022.jpg" alt=""></p>
+<p><img src="images/image023.jpg" alt=""> </p>
+<p><img src="images/image024.jpg" alt=""> </p>
+<p><img src="images/image025.jpg" alt=""> </p>
+<p><img src="images/image026.jpg" alt=""> </p>
+<h3 id="konfigurasi-lcd-posisi-bujur-lintang">Konfigurasi LCD (Posisi Bujur Lintang)</h3>
+<p><img src="images/image027.jpg" alt=""></p>
+<p><img src="images/image028.jpg" alt="">  </p>
+<h3 id="konfigurasi-map">Konfigurasi MAP</h3>
+<p><img src="images/image029.jpg" alt=""></p>
+<p>Copy Token Blynk Ke NodeMCU 
+<img src="images/image030.jpg" alt=""></p>
+<p><img src="images/image031.jpg" alt=""></p>
+<blockquote>
+<p>Daftar device yang tersedia pada Blynk sesuai akun masing-masing 
+<img src="images/image032.jpg" alt="">
+Contoh nama device saya beri nama <code>Monitoring Unisba</code>. 
+Punya kalian silahkan diberi nama bebas. Device dibentuk saat membuat akun pertama kali </p>
+</blockquote>
+<p><img src="images/image033.jpg" alt=""></p>
+<blockquote>
+<p>Setiap device akan digenerate sebuah Token, yang harus dituliskan pada NodeMCU.</p>
+</blockquote>
+<h3 id="jalankan-aplikasi-blynk">Jalankan Aplikasi Blynk</h3>
+<p><img src="images/image034.jpg" alt=""></p>
+<blockquote>
+<p>Jangan lupa klik tombol play pada pojok kanan atas untuk menjalankan aplikasi IoT</p>
+<p>Jika muncul gambar di bawah ini maka berarti ada kesalahan koneksi atau salah kode tokennya, silahkan cek ulang. 
+<img src="images/image035.jpg" alt="">
+Device belum terhubung dengan server Blynk </p>
+</blockquote>
+<p>Jika kalian lupa tokennya, silahkan buka halaman dashboard web server Blynk, contoh <a href="https://192.168.1.100:9443" target="_blank">https://192.168.1.100:9443</a>. Dengan user admin@blynk.cc dan password admin. Berikut ini ilustrasinya: 
+<img src="images/image036.jpg" alt=""> </p>
+<blockquote>
+<p>Login superadmin Blynk Dashboard, pilih menu user dan pilih salah satu user
+<img src="images/image037.jpg" alt=""></p>
+</blockquote>
+<p><img src="images/image038.jpg" alt=""></p>
+<blockquote>
+<p>Token harus dituliskan pada device</p>
+</blockquote>
+<h2 id="tugas">Tugas</h2>
+<p>Buat laporan untuk tahapan di atas. </p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../09/09-local-server.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 12. Local Server">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"13. Monitoring dan Controlling pada Local Server","level":"1.15","depth":1,"next":{"title":"Nilai","level":"1.16","depth":1,"ref":"","articles":[{"title":"TI-3B","level":"1.16.1","depth":2,"path":"nilai/01-ti-3b.md","ref":"nilai/01-ti-3b.md","articles":[]},{"title":"TI-3C","level":"1.16.2","depth":2,"path":"nilai/02-ti-3c.md","ref":"nilai/02-ti-3c.md","articles":[]}]},"previous":{"title":"12. Local Server","level":"1.14","depth":1,"path":"09/09-local-server.md","ref":"09/09-local-server.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"10/10-monitoring-controlling-local-server.md","mtime":"2020-06-28T16:08:15.092Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-28T16:08:58.372Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
