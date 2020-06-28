@@ -154,7 +154,9 @@ void KelembabanSuhu() {
 
 void Lokasi_gps() { 
   Serial.println("Lat: " + String(gps.location.lat()) + " - Lng: " + gps.location.lng()); 
-  Blynk.virtualWrite(V2, "Lint.:" + String(gps.location.lat(), 6));   Blynk.virtualWrite(V3, "Bujur:" + String(gps.location.lng(), 6));   myMap.location(2, gps.location.lat(), gps.location.lng(), "Lokasi Saya"); 
+  Blynk.virtualWrite(V2, "Lint.:" + String(gps.location.lat(), 6));   
+  Blynk.virtualWrite(V3, "Bujur:" + String(gps.location.lng(), 6));   
+  myMap.location(2, gps.location.lat(), gps.location.lng(), "Lokasi Saya"); 
 }  
 
 static void smartDelay(unsigned long ms) 
@@ -173,6 +175,7 @@ Download dan install aplikasi blynk dari plystore
 ![](images/image003.jpg)  
 
 Buat koneksi antara Blynk sebagai subscriber dengan Raspberry Pi 3 sebagai server IoT. Pada kasus ini kita menggunakan local server yang saya sediakan.
+
 ![](images/image004.jpg)
 
 ![](images/image005.jpg) 
