@@ -227,8 +227,10 @@ Buat tampilan interface seperti berikut, dimana komponen widget terdiri dari:
  
 ### Konfigurasi SuperChart (Pergerakan Suhu dan Kelembaban) 
 ![](images/image019.jpg) 
+
 > Dalam satu chart terdapat 2 datastream, yaitu suhu dan kelembaban. Untuk menambahkan data stream silakan klik button
 >`Add Datastream` 
+
 ![](images/image020.jpg)
  
 ![](images/image021.jpg)
