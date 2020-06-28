@@ -14,6 +14,7 @@
 * [10. Socket Client](07/07-socket-client.md)
 * [11. Socket Server](08/08-socket-server.md)
 * [12. Local Server](09/09-local-server.md)
+* [13. Monitoring dan Controlling pada Local Server](10/10-monitoring-controlling-local-server.md)
 * [Nilai]()
     + [TI-3B](nilai/01-ti-3b.md)
     + [TI-3C](nilai/02-ti-3c.md)
